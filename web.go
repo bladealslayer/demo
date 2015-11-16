@@ -26,5 +26,5 @@ func main() {
 }
 
 func hello(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("Test" + os.Getenv("MESSAGE")))
+	w.Write([]byte(os.Getenv("MESSAGE")))
 }
