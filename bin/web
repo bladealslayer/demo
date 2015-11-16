@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if [ "$DEVELOPMENT" == "true" ]; then
+  $GOPATH/bin/rerun -build github.com/convox/demo
+else
+  $GOPATH/bin/demo
+fi
