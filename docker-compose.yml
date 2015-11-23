@@ -6,5 +6,6 @@ web:
     - MESSAGE
   ports:
     - 80:3000
+    - 443:3000
   volumes:
     - .:/go/src/github.com/convox/demo
