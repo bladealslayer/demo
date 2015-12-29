@@ -12,9 +12,8 @@ web:
   links:
     - redis
 worker:
-  build: .
-  dockerfile: Dockerfile.worker
-  command: bin/work
+  build: worker
+  command: /opt/app/work
   environment:
     - WORKER_ROLE=indexer
 redis:
