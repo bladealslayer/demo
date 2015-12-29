@@ -9,9 +9,13 @@ web:
     - 443:3000
   volumes:
     - .:/go/src/github.com/convox/demo
+  links:
+    - redis
 worker:
   build: .
   dockerfile: Dockerfile.worker
   command: bin/work
   environment:
     - WORKER_ROLE=indexer
+redis:
+  image: redis
