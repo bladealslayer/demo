@@ -9,12 +9,10 @@ web:
     - 443:3000
   volumes:
     - .:/go/src/github.com/convox/demo
-  links:
-    - redis1
 worker:
   build: worker
   command: /opt/app/work
   environment:
     - WORKER_ROLE=indexer
-redis1:
+redis:
   image: redis
