@@ -11,6 +11,7 @@ web:
     - .:/go/src/github.com/convox/demo
 worker:
   build: .
+  dockerfile: Dockerfile.worker
   command: bin/work
   environment:
     - WORKER_ROLE=indexer

@@ -3,7 +3,7 @@
 echo Working...
 i=1
 while true ; do
-  echo "Work: $i"
+  echo "Work: $i $WORKER_TEST $WORKER_ROLE"
   i=$((i+1))
   sleep 10
 done

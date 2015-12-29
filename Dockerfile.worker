@@ -1,0 +1,8 @@
+FROM gliderlabs/alpine:3.2
+
+WORKDIR /go/src/github.com/convox/demo
+COPY . /go/src/github.com/convox/demo
+RUN go get ./...
+
+ENV WORKER_TEST foobar
+CMD ["bin/work"]
